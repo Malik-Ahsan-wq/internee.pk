@@ -20,7 +20,7 @@ const Student = () => {
         <div>
           <img className="brightness-50 " src="/suit image.avif" alt="" />
           <div className="flex justify-center items-center mx-auto">
-            <div className="  text-center  top-50 z-1 md:text-start md:absolute md:top-100 md:left-30 font-bold text-white md:text-6xl  md:leading-15 max-w-7xl px-4">
+            <div className="  text-center z-1 -mt-40 md:text-start md:absolute md:top-100 md:left-30 font-bold text-white md:text-6xl  md:leading-15 max-w-7xl px-4">
               <h1 className="text-4xl  md:text-5xl leading-20">Internee.pk</h1>
               <h1 className="text-3xl pb-5 md:text-5xl  ">
                 Student Ambassadors
