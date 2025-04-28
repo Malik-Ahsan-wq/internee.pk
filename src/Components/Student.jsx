@@ -123,9 +123,9 @@ const Student = () => {
       </div>
 
       <div className="max-w-7xl mx-auto pt-20 pb-10">
-        <div className="md:flex justify-center px-5 md:px-10 mt-10 items-center gap-30">
-          <div className="bg-gray-100 px-5 py-7 mt-7 w-84  md:w-90 ">
-            <IoMdChatbubbles className="text-main text-2xl" />
+        <div className="md:flex justify-center px-5 md:px-10 mt-10 items-center gap-10">
+          <div className="bg-gray-100 px-5 py-7 md:py-10 mt-7 w-84  md:w-130 ">
+            <IoMdChatbubbles className="text-main text-2xl md:text-5xl" />
             <h1 className="text-2xl mt-4 font-semibold">Learn and Grow</h1>
             <p className="text-sm mt-4">
               Access exclusive learning resources and certifications to build
@@ -133,15 +133,15 @@ const Student = () => {
             </p>
           </div>
 
-          <div className="bg-gray-100 px-5 py-7 mt-7 w-84 md:w-90 ">
-            <IoMan className="text-main text-4xl" />
+          <div className="bg-gray-100 px-5 py-7 md:py-10 mt-7 w-84  md:w-130">
+            <IoMan className="text-main text-2xl md:text-5xl" />
             <h1 className="text-2xl mt-4 font-semibold">Build Community</h1>
             <p className="text-sm mt-4">
               Connect with fellow students and mentors from around the world.
             </p>
           </div>
 
-          <div className="bg-gray-100 px-5 py-7 mt-7 w-84 md:w-90 ">
+          <div className="bg-gray-100 px-5 py-7 md:py-10 mt-7 w-84  md:w-130 ">
             <LuArrowRightLeft className="text-main text-4xl" />
             <h1 className="text-2xl mt-4 font-semibold">Create Solutions</h1>
             <p className="text-sm mt-4">
