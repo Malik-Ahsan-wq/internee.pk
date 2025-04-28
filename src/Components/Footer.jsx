@@ -36,7 +36,7 @@ const Footer = () => {
         <div className="border-b border-gray-300 grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-50 p-6">
           {/* Logo & About */}
           <div>
-            <img src="/logo.png" alt="Logo" className="w-32 mb-4" />
+            <img src="/internee2.png" alt="Logo" className="w-32 mb-4" />
             <p className="text-sm mb-4">
               The ultimate platform designed to turbocharge the IT sector in
               Pakistan.
