@@ -3,7 +3,7 @@ import React from 'react'
 const Graphic = () => {
   return (
     <div>
-     hello this is graphic page
+  <h1>ahsan malik</h1>
     </div>
   )
 }

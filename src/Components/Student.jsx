@@ -19,17 +19,17 @@ const Student = () => {
       <div className="flex justify-center">
         <div>
           <img
-            className="brightness-50 relative"
+            className="brightness-50 "
             src="/suit image.avif"
             alt=""
           />
           <div className="flex justify-center items-center mx-auto">
-            <div className="absolute top-30 text-center md:text-start md:absolute md:top-100 md:left-30 font-bold text-white md:text-6xl  md:leading-15 max-w-7xl px-4">
-              <h1 className="text-4xl md:text-5xl">Internee.pk</h1>
-              <h1 className="text-3xl pb-5 md:text-5xl mt-5">Student Ambassadors</h1>
+            <div className="  text-center top-50 z-1 md:text-start md:absolute md:top-100 md:left-30 font-bold text-white md:text-6xl  md:leading-15 max-w-7xl px-4">
+              <h1 className="text-4xl -mt-20 md:text-5xl">Internee.pk</h1>
+              <h1 className="text-3xl pb-5 md:text-5xl -mt-10 ">Student Ambassadors</h1>
             </div>
             <div className="hidden md:flex justify-center items-center pb-10">
-              <div className="absolute top-140 left-20 bg-[#e5e7eb] py-6 rounded-2xl max-w-[1200px] mx-4">
+              <div className=" -mt-100 z-1 bg-[#e5e7eb] py-6 rounded-2xl max-w-[1200px] mx-4">
                 <div className="flex justify-center items-center px-10 gap-5">
                   <div>
                     <h3 className="text-2xl font-bold mb-5">
@@ -73,8 +73,8 @@ const Student = () => {
           </div>
         </div>
       </div>
-      <div className="flex justify-center items-center max-w-7xl mx-auto pt-30 md:pt-150 flex-wrap gap-6">
-        <div className="md:flex py-5 hover:scale-105 transition duration-150 items-center text-center   shadow-md md:w-72">
+      <div className="flex justify-center items-center max-w-7xl mx-auto  flex-wrap gap-6">
+        <div className="md:flex  hover:scale-105 transition duration-150 items-center text-center   shadow-md md:w-72">
           <div className="bg-gray-200  px-5 py-5 ">
             <IoMan className="text-main mx-auto  text-6xl" />
           </div>
@@ -85,7 +85,7 @@ const Student = () => {
             </span>
           </div>
         </div>
-        <div className="md:flex py-5 hover:scale-105 transition duration-150 items-center text-center   shadow-md md:w-72">
+        <div className="md:flex  hover:scale-105 transition duration-150 items-center text-center   shadow-md md:w-72">
           <div className="bg-gray-200  px-5 py-5 ">
             <GrTrophy className="text-main mx-auto  text-6xl" />
           </div>
@@ -96,7 +96,7 @@ const Student = () => {
             </span>
           </div>
         </div>
-        <div className="md:flex py-5 hover:scale-105 transition duration-150 items-center text-center   shadow-md md:w-72">
+        <div className="md:flex  hover:scale-105 transition duration-150 items-center text-center   shadow-md md:w-72">
           <div className="bg-gray-200   px-5 py-5 ">
             <IoMdCheckboxOutline className="text-main mx-auto  text-6xl" />
           </div>
@@ -109,7 +109,7 @@ const Student = () => {
             </span>
           </div>
         </div>
-        <div className="md:flex py-5 hover:scale-105 transition duration-150 items-center text-center shadow-md md:w-72">
+        <div className="md:flex  hover:scale-105 transition duration-150 items-center text-center shadow-md md:w-72">
           <div className="bg-gray-200  px-5 py-5 ">
             <LuNotepadText className="text-main mx-auto   text-6xl" />
           </div>

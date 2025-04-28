@@ -43,6 +43,7 @@ const Trending = () => {
                     Apply Now
                   </button>
                 </Link>
+                
               </div>
             </div>
           ))}
