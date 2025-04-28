@@ -18,15 +18,13 @@ const Student = () => {
     <div>
       <div className="flex justify-center">
         <div>
-          <img
-            className="brightness-50 "
-            src="/suit image.avif"
-            alt=""
-          />
+          <img className="brightness-50 " src="/suit image.avif" alt="" />
           <div className="flex justify-center items-center mx-auto">
-            <div className="  text-center top-50 z-1 md:text-start md:absolute md:top-100 md:left-30 font-bold text-white md:text-6xl  md:leading-15 max-w-7xl px-4">
-              <h1 className="text-4xl -mt-20 md:text-5xl">Internee.pk</h1>
-              <h1 className="text-3xl pb-5 md:text-5xl -mt-10 ">Student Ambassadors</h1>
+            <div className="  text-center  top-50 z-1 md:text-start md:absolute md:top-100 md:left-30 font-bold text-white md:text-6xl  md:leading-15 max-w-7xl px-4">
+              <h1 className="text-4xl  md:text-5xl leading-20">Internee.pk</h1>
+              <h1 className="text-3xl pb-5 md:text-5xl  ">
+                Student Ambassadors
+              </h1>
             </div>
             <div className="hidden md:flex justify-center items-center pb-10">
               <div className=" -mt-100 z-1 bg-[#e5e7eb] py-6 rounded-2xl max-w-[1200px] mx-4">
@@ -73,49 +71,51 @@ const Student = () => {
           </div>
         </div>
       </div>
-      <div className="flex justify-center items-center max-w-7xl mx-auto  flex-wrap gap-6">
+      <div className="flex justify-center items-center md:mt-20 max-w-7xl mx-auto  flex-wrap gap-6">
         <div className="md:flex  hover:scale-105 transition duration-150 items-center text-center   shadow-md md:w-72">
-          <div className="bg-gray-200  px-5 py-5 ">
+          <div className="bg-gray-200 py-5 px-5 md:py-4 ">
             <IoMan className="text-main mx-auto  text-6xl" />
           </div>
-          <div className="ml-4 ">
-            <span className="block font-semibold text-start ">Get Started</span>
-            <span className="block text-start">
-              Become a student Ambassador
-            </span>
-          </div>
-        </div>
-        <div className="md:flex  hover:scale-105 transition duration-150 items-center text-center   shadow-md md:w-72">
-          <div className="bg-gray-200  px-5 py-5 ">
-            <GrTrophy className="text-main mx-auto  text-6xl" />
-          </div>
-          <div className="ml-4 ">
-            <span className="block font-semibold text-start ">Community</span>
-            <span className="block text-start ">
+          <div className="ml-4 py-4 ">
+            <span className="block font-semibold text-start  ">Community</span>
+            <span className="block text-start md:text-[12px] w-80 md:w-[170px]  ">
               Explore Student Ambassador profiles
             </span>
           </div>
         </div>
         <div className="md:flex  hover:scale-105 transition duration-150 items-center text-center   shadow-md md:w-72">
-          <div className="bg-gray-200   px-5 py-5 ">
+          <div className="bg-gray-200 py-5 px-5 md:py-4 ">
+            <GrTrophy className="text-main mx-auto  text-6xl" />
+          </div>
+          <div className="ml-4 py-4">
+            <span className="block font-semibold text-start ">Community</span>
+            <span className="block text-start md:text-[12px] w-80 md:w-[170px]  ">
+              Explore Student Ambassador profiles
+            </span>
+          </div>
+        </div>
+        <div className="md:flex  hover:scale-105 transition duration-150 items-center text-center   shadow-md md:w-72">
+          <div className="bg-gray-200 py-5  px-5 md:py-4  ">
             <IoMdCheckboxOutline className="text-main mx-auto  text-6xl" />
           </div>
-          <div className="ml-4 ">
+          <div className="ml-4 py-4">
             <span className="block font-semibold text-start ">
               Startup Compitition
             </span>
-            <span className="block text-start">
+            <span className="block text-start md:text-[12px] w-80 md:w-[170px] ">
               Student competition for AI startups
             </span>
           </div>
         </div>
         <div className="md:flex  hover:scale-105 transition duration-150 items-center text-center shadow-md md:w-72">
-          <div className="bg-gray-200  px-5 py-5 ">
+          <div className="bg-gray-200 py-5  px-5 md:py-6  ">
             <LuNotepadText className="text-main mx-auto   text-6xl" />
           </div>
-          <div className="ml-4 ">
-            <span className="block font-semibold text-start mt-3 ">Founder Hub</span>
-            <span className="block text-start">
+          <div className="ml-4 py-4">
+            <span className="block font-semibold text-start mt-3 ">
+              Founder Hub
+            </span>
+            <span className="block text-start md:text-[12px] w-80 md:w-[170px]  ">
               A platform for entrepreneurs stage
             </span>
           </div>
