@@ -51,7 +51,7 @@ const Hero = () => {
 
         {/* Partners Section */}
         <div className="py-20">
-          <h1 className="text-center px-20 mb-20 mt-10">
+          <h1 className="text-center px-20  mt-10">
             Collaborate with trusted world wide partners
           </h1>
           <div className="flex gap-20 cursor-pointer justify-center flex-wrap pb-20 mt-10">
