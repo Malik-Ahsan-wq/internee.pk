@@ -154,7 +154,7 @@ const Student = () => {
       {/* Footer */}
 
       <div className="bg-gray-100 mt-15">
-        <footer className="bg-gray-100 text-gray-700 md:mx-auto md:max-w-[1500px]">
+        <footer className="bg-gray-100 text-gray-700 md:mx-auto md:max-w-7xl">
           {/* Newsletter Section */}
           <div className="border-b border-gray-300 flex flex-col md:flex-row justify-between items-center p-6">
             <div className="mb-4 md:mb-0">
