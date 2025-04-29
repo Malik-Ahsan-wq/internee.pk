@@ -1,5 +1,6 @@
 import React from "react";
 import { FiArrowDownRight } from "react-icons/fi";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
@@ -20,13 +21,18 @@ const Hero = () => {
               networking opportunities.
             </p>
             <div className="flex flex-col md:flex-row gap-5">
-              <button className="w-full md:w-auto bg-main cursor-pointer hover:bg-white hover:text-main border border-main py-3 px-6 rounded-2xl text-white font-semibold transition-all duration-300">
-                Our Job Portal
-              </button>
-              <button className="w-full md:w-auto bg-black hover:bg-gray-800 cursor-pointer flex items-center justify-center gap-3 py-3 px-6 rounded-2xl text-white font-semibold transition-all duration-300">
-                Sign In
-                <FiArrowDownRight className="text-xl" />
-              </button>
+              <Link to="/portal">
+                <button className="w-full md:w-auto bg-main cursor-pointer hover:bg-white hover:text-main border border-main py-3 px-6 rounded-2xl text-white font-semibold transition-all duration-300">
+                  Our Job Portal
+                </button>
+              </Link>
+
+              <Link to="/internshipPage">
+                <button className="w-full md:w-auto bg-black hover:bg-gray-800 cursor-pointer flex items-center justify-center gap-3 py-3 px-6 rounded-2xl text-white font-semibold transition-all duration-300">
+                  Dashboard
+                  <FiArrowDownRight className="text-xl" />
+                </button>
+              </Link>
             </div>
           </div>
 
