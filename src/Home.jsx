@@ -16,8 +16,8 @@ import Footer from "./Components/Footer";
 const Home = () => {
   return (
     <div>
-     
       <Hero />
+    
       <Trending />
       <Skills />
       <Content />

@@ -12,9 +12,9 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/internshipPage" element={<InternshipPage />} />
-     <Route path="/graduate" element={<Graduate/>}/>
-     <Route path="/student" element={<Student/>}/>
-     <Route path="/graphic" element={<Graphic/>}/>
+        <Route path="/graduate" element={<Graduate />} />
+        <Route path="/student" element={<Student />} />
+        <Route path="/graphic" element={<Graphic />} />
       </Routes>
     </>
   );
