@@ -5,61 +5,65 @@ const companies = [
   {
     name: "Google",
     description:
-      "Leading tech company known for its search engine and innovative projects.",
+      "Global software and internet company known for Android, Chrome, and cloud-based solutions like Google Cloud and Workspace.",
   },
   {
     name: "Microsoft",
     description:
-      "Global software giant and creator of Windows, Office, and Azure.",
+      "Enterprise software leader offering Windows OS, Office 365, Azure cloud services, and developer tools like Visual Studio.",
   },
   {
-    name: "Amazon",
-    description: "E-commerce leader and cloud computing provider through AWS.",
-  },
-  {
-    name: "Apple",
+    name: "Oracle",
     description:
-      "Famous for iPhones, Macs, and elegant software/hardware integration.",
+      "Renowned for database software and enterprise resource planning (ERP) systems used by global corporations.",
   },
   {
-    name: "Netflix",
+    name: "SAP",
     description:
-      "Streaming entertainment service with a wide range of original content.",
-  },
-  {
-    name: "Meta",
-    description:
-      "Parent company of Facebook, Instagram, and WhatsApp focusing on the metaverse.",
-  },
-  {
-    name: "Tesla",
-    description: "Electric vehicle and clean energy company led by Elon Musk.",
+      "German software company specializing in enterprise software for managing business operations and customer relations.",
   },
   {
     name: "Adobe",
     description:
-      "Creative software leader with tools like Photoshop and Illustrator.",
+      "Industry leader in creative software like Photoshop, Illustrator, Premiere Pro, and digital experience platforms.",
   },
   {
-    name: "IBM",
+    name: "Salesforce",
     description:
-      "One of the oldest tech companies specializing in AI and cloud solutions.",
+      "World’s top customer relationship management (CRM) software provider, widely used in sales and marketing automation.",
   },
   {
-    name: "Spotify",
+    name: "Atlassian",
     description:
-      "Popular music streaming platform with millions of users worldwide.",
+      "Developer-focused software company offering tools like Jira, Confluence, and Bitbucket for team collaboration and project tracking.",
   },
   {
-    name: "Uber",
+    name: "GitHub",
     description:
-      "Ride-sharing and delivery service transforming urban mobility.",
+      "Platform for software version control and collaboration, widely used for hosting and reviewing code using Git.",
   },
   {
-    name: "Intel",
-    description: "Semiconductor manufacturer powering millions of computers.",
+    name: "Slack (by Salesforce)",
+    description:
+      "Business communication platform designed for teams to collaborate via messaging, channels, and app integrations.",
+  },
+  {
+    name: "Zoom",
+    description:
+      "Video conferencing software enabling virtual meetings, webinars, and remote collaboration across the globe.",
+  },
+  {
+    name: "Dropbox",
+    description:
+      "Cloud-based file storage and collaboration platform designed for individuals and teams to share and manage documents.",
+  },
+  {
+    name: "Intuit",
+    description:
+      "Developer of financial software like QuickBooks and TurboTax, serving small businesses and individuals.",
   },
 ];
+
 
 export default function Portal() {
   const [query, setQuery] = useState("");
@@ -69,7 +73,9 @@ export default function Portal() {
   );
 
   return (
-    <div className="max-w-7xl mx-auto p-6">
+    <div className="max-w-7xl mx-auto p-6 mt-20">
+
+        <h1 className="text-4xl md:text-7xl py-5 font-semibold text-main text-center">Our Job Portal</h1>
       <div className="flex flex-col sm:flex-row items-center gap-2 mb-6">
         <div className="relative w-full sm:w-auto flex-1">
           <input
@@ -96,7 +102,7 @@ export default function Portal() {
               <h2 className="text-xl font-semibold mb-2">{company.name}</h2>
               <p className="text-gray-600 text-sm">{company.description}</p>
             </div>
-            <button className="mt-4 bg-main text-white px-4 py-2 rounded-xl hover:bg-blue-500 transition-all">
+            <button className="mt-4 bg-main text-white px-4 py-2 rounded-xl hover:bg-black cursor-pointer transition-all">
               Apply Now
             </button>
           </div>

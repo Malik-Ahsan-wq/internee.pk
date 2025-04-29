@@ -43,12 +43,12 @@ const Navbar = () => {
             </li>
           </ul>
           <div className="flex gap-4 items-center">
-            <Link to="/">
+            <Link to="/portal">
               <button className="bg-main px-4 py-2 cursor-pointer rounded-2xl text-white hover:bg-white hover:text-main border">
                 Job Portal
               </button>
             </Link>
-            <Link to="/graduate">
+            <Link to="/internshipPage">
               <button className="border cursor-pointer px-4 py-2 rounded-2xl text-main hover:bg-main hover:text-white">
                 Dashboard
               </button>
@@ -96,7 +96,7 @@ const Navbar = () => {
                 Internship
               </a>
             </Link>
-            <Link to="/">
+            <Link to="/portal">
               <a
                 className="hover:text-main text-white"
                 href="#"
@@ -123,7 +123,7 @@ const Navbar = () => {
                 Student Ambassador
               </a>
             </Link>
-            <Link to="/">
+            <Link to="/internshipPage">
               <a
                 className="hover:text-main flex items-center gap-3 text-white"
                 onClick={() => setIsOpen(!isOpen)}
