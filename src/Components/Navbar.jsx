@@ -13,7 +13,9 @@ const Navbar = () => {
       <div className="flex items-center md:mx-auto  max-w-7xl  justify-between py-3 px-5">
         {/* Logo */}
         <div>
-          <img className="w-40" src="/internee2.png" alt="Logo" />
+          <Link to="/">
+            <img className="w-40" src="/internee2.png" alt="Logo" />
+          </Link>
         </div>
 
         {/* Desktop Navigation */}
@@ -34,7 +36,7 @@ const Navbar = () => {
                 Graduate Program
               </Link>
             </li>
-            <li>    
+            <li>
               <Link to="/student" className="hover:text-main">
                 Student Ambassador
               </Link>

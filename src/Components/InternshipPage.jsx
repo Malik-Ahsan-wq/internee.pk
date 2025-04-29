@@ -25,8 +25,8 @@ const InternshipPage = () => {
         </div>
         <div>
           <button
-            className="bg-main mt-5 px-[15px] md:mt-20  py-10 text-xl font-bold cursor-pointer rounded-2xl text-white border 
-    sm:px-10 sm:py-8 sm:text-lg md:py-10 md:text-xl lg:py-12 lg:text-2xl"
+            className="bg-main mt-5 px-[10px] md:mt-20  py-10 text-xl font-bold cursor-pointer rounded-2xl text-white border 
+ md:py-10 md:text-xl lg:py-12 lg:text-2xl"
           >
             Find Your Dream Internship Today!
           </button>
