@@ -38,12 +38,12 @@ const Trending = () => {
               <div className="p-4 flex flex-col gap-2">
                 <span className="text-lg font-semibold">{item.title}</span>
 
-                <button className="flex items-center cursor-pointer gap-2 text-main hover:underline mt-2">
                   <Link to="/graphic">
+                <button className="flex items-center cursor-pointer gap-2 text-main hover:underline mt-2">
                     <FaArrowRightToBracket />
                     Apply Now
-                  </Link>
                 </button>
+                  </Link>
               </div>
             </div>
           ))}
