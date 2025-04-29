@@ -5,6 +5,7 @@ import Navbar from "./Components/Navbar";
 import Graduate from "./Components/Graduate";
 import Student from "./Components/Student";
 import Graphic from "./Components/Graphic";
+
 function App() {
   return (
     <>
@@ -15,6 +16,7 @@ function App() {
         <Route path="/graduate" element={<Graduate />} />
         <Route path="/student" element={<Student />} />
         <Route path="/graphic" element={<Graphic />} />
+      
       </Routes>
     </>
   );
