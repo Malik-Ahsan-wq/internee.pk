@@ -20,13 +20,13 @@ const Footer = () => {
               trends.
             </p>
           </div>
-          <div className="flex">
+          <div className="flex ml-5">
             <input
               type="email"
               placeholder="Enter your Email"
               className="p-2 border border-gray-300 rounded-l-md focus:outline-none "
             />
-            <button className="bg-main  cursor-pointer text-white px-4 rounded-r-md hover:bg-blue-600">
+            <button className="bg-main mr-5  cursor-pointer text-white px-4 rounded-r-md hover:bg-blue-600">
               Subscribe
             </button>
           </div>
