@@ -54,7 +54,7 @@ const Hero = () => {
           <h1 className="text-center px-20  mt-10">
             Collaborate with trusted world wide partners
           </h1>
-          <div className="flex gap-40 cursor-pointer justify-center flex-wrap  mt-20">
+          <div className="flex gap-30 md:gap-40 cursor-pointer justify-center flex-wrap  mt-20">
             <img
               className="w-20 max-w-full transition-transform duration-300 transform hover:scale-110"
               src="/cloud.png"

@@ -10,7 +10,7 @@ const Navbar = () => {
 
   return (
     <div className="fixed top-0 left-0 w-full z-50  bg-white shadow-md">
-      <div className="flex items-center md:mx-auto  max-w-7xl  justify-between py-3 px-4">
+      <div className="flex items-center md:mx-auto  max-w-7xl  justify-between py-3 px-5">
         {/* Logo */}
         <div>
           <img className="w-40" src="/internee2.png" alt="Logo" />
