@@ -262,13 +262,13 @@ const Graphic = () => {
                 trends.
               </p>
             </div>
-            <div className="flex">
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center ml-5 sm:ml-5 space-y-2 sm:space-y-0 sm:space-x-0">
               <input
                 type="email"
                 placeholder="Enter your Email"
-                className="p-2 border border-gray-300 rounded-l-md focus:outline-none"
+                className="p-2 border border-gray-300 rounded-md sm:rounded-l-md sm:rounded-r-none focus:outline-none w-full sm:w-auto"
               />
-              <button className="bg-main cursor-pointer text-white px-4 rounded-r-md hover:bg-blue-600">
+              <button className="bg-main text-white px-4 py-2 rounded-md sm:rounded-r-md sm:rounded-l-none hover:bg-blue-600 w-full sm:w-auto">
                 Subscribe
               </button>
             </div>
