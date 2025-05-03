@@ -1,86 +1,195 @@
-import React from "react";
+import React, { useState } from "react";
+import { X } from "lucide-react";
 
 const Popup = () => {
+  const [isOpen, setIsOpen] = useState(true);
+  const [formData, setFormData] = useState({
+    fullName: "",
+    fatherName: "",
+    phone: "",
+    cnic: "",
+    address: "",
+    institute: "",
+    experience: "",
+    projectsUrl: "",
+    referral: "",
+    expectations: "",
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Here you would typically send the form data to your backend
+    console.log("Form submitted:", formData);
+    alert("Application submitted successfully!");
+    setIsOpen(false);
+  };
+
+  const handleClose = () => {
+    setIsOpen(false);
+  };
+
+  if (!isOpen) return null;
+
   return (
-    <div className="max-w-3xl mx-auto mt-10 p-6 bg-white shadow-lg rounded-lg border border-gray-200">
-      <h1 className="text-2xl font-bold text-center text-[--color-main] mb-6">
-        Apply for Photoshop Internship
-      </h1>
-
-      <form className="space-y-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <input type="text" placeholder="Full Name" className="input" />
-          <input type="text" placeholder="Father's Name" className="input" />
-          <input type="text" placeholder="Phone Number" className="input" />
-          <input
-            type="text"
-            placeholder="CNIC (XXXXX-XXXXXXX-X)"
-            className="input"
-          />
-          <input
-            type="text"
-            placeholder="Permanent Address"
-            className="input"
-          />
-          <input type="text" placeholder="Institute" className="input" />
-          <input
-            type="text"
-            placeholder="Working Experience"
-            className="input"
-          />
-          <input type="text" placeholder="Past Project URL" className="input" />
-        </div>
-
-        <input
-          type="text"
-          placeholder="Where did you hear about internee.pk?"
-          className="input"
-        />
-        <input
-          type="text"
-          placeholder="What do you expect from us?"
-          className="input"
-        />
-
-        <div>
-          <label className="font-semibold">
-            Upload Resume <span className="text-red-500">*</span>
-          </label>
-          <input
-            type="file"
-            className="block w-full mt-2 border rounded px-3 py-2"
-          />
-        </div>
-
-        <div>
-          <label className="font-semibold">
-            Upload Payment Screenshot <span className="text-red-500">*</span>
-          </label>
-          <input
-            type="file"
-            className="block w-full mt-2 border rounded px-3 py-2"
-          />
-        </div>
-
-        <div className="bg-gray-100 border p-4 rounded">
-          <h2 className="text-lg font-semibold text-[--color-main]">
-            Payment Section | 500 PKR or 5$
-          </h2>
-          <p>Meezan Bank: 99430106993383 (IBAN: PK86MEZN0099430106993383)</p>
-          <p>SadaPay: 03453191638 (IBAN: PK94SADA0000003453191638)</p>
-          <p>EasyPaisa: 03276227156 (MUHAMMAD AHSAN BASHIR)</p>
-          <p className="text-sm text-red-600 mt-2">
-            Note: You can enroll in only one internship at a time.
-          </p>
-        </div>
-
+    <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
+      <div className="bg-white rounded-lg w-[350px] md:w-full md:max-w-md relative max-h-[90vh] overflow-hidden">
+        {/* Close Button */}
         <button
-          type="submit"
-          className="w-full  text-white bg-main py-2 px-4 rounded hover:bg-blue-600 transition"
+          onClick={handleClose}
+          className="absolute top-4 cursor-pointer right-2 md:right-4 text-gray-700 hover:text-gray-900"
         >
-          Submit Application
+          <X size={24} />
         </button>
-      </form>
+
+        {/* Form Header */}
+        <div className="p-6 pb-4">
+          <h2 className=" text-xl md:text-2xl font-bold text-center">
+            Apply for Salesforce CRM Internship
+          </h2>
+        </div>
+
+        {/* Form Content - Scrollable */}
+        <div className="px-6 overflow-y-auto max-h-[60vh]">
+          <form onSubmit={handleSubmit}>
+            <div className="space-y-4">
+              <div>
+                <input
+                  type="text"
+                  name="fullName"
+                  placeholder="Full Name"
+                  className="w-full p-3 border border-main rounded focus:outline-none focus:ring-1 focus:ring-main"
+                  required
+                  value={formData.fullName}
+                  onChange={handleChange}
+                />
+              </div>
+
+              <div>
+                <input
+                  type="text"
+                  name="fatherName"
+                  placeholder="Father's Name"
+                  className="w-full p-3 border border-main rounded focus:outline-none focus:ring-1 focus:main"
+                  required
+                  value={formData.fatherName}
+                  onChange={handleChange}
+                />
+              </div>
+
+              <div>
+                <input
+                  type="tel"
+                  name="phone"
+                  placeholder="0320-1234567"
+                  className="w-full p-3 border border-main rounded focus:outline-none focus:ring-1 focus:ring-main"
+                  pattern="[0-9]{4}-[0-9]{7}"
+                  required
+                  value={formData.phone}
+                  onChange={handleChange}
+                />
+              </div>
+
+              <div>
+                <input
+                  type="text"
+                  name="cnic"
+                  placeholder="XXXXX-XXXXXXX-X"
+                  className="w-full p-3 border border-main rounded focus:outline-none focus:ring-1 focus:ring-main"
+                  pattern="[0-9]{5}-[0-9]{7}-[0-9]{1}"
+                  required
+                  value={formData.cnic}
+                  onChange={handleChange}
+                />
+              </div>
+
+              <div>
+                <input
+                  type="text"
+                  name="address"
+                  placeholder="Permanent Address"
+                  className="w-full p-3 border border-main rounded focus:outline-none focus:ring-1 focus:ring-main"
+                  required
+                  value={formData.address}
+                  onChange={handleChange}
+                />
+              </div>
+
+              <div>
+                <input
+                  type="text"
+                  name="institute"
+                  placeholder="Institute"
+                  className="w-full p-3 border border-main rounded focus:outline-none focus:ring-1 focus:ring-main"
+                  required
+                  value={formData.institute}
+                  onChange={handleChange}
+                />
+              </div>
+
+              <div>
+                <input
+                  type="text"
+                  name="experience"
+                  placeholder="Working Experience"
+                  className="w-full p-3 border border-main rounded focus:outline-none focus:ring-1 focus:ring-main"
+                  value={formData.experience}
+                  onChange={handleChange}
+                />
+              </div>
+
+              <div>
+                <input
+                  type="url"
+                  name="projectsUrl"
+                  placeholder="Your Past Projects URL"
+                  className="w-full p-3 border border-main rounded focus:outline-none focus:ring-1 focus:ring-main"
+                  value={formData.projectsUrl}
+                  onChange={handleChange}
+                />
+              </div>
+
+              <div>
+                <input
+                  type="text"
+                  name="referral"
+                  placeholder="Where did you hear about internee.pk"
+                  className="w-full p-3 border border-main rounded focus:outline-none focus:ring-1 focus:ring-main"
+                  value={formData.referral}
+                  onChange={handleChange}
+                />
+              </div>
+
+              <div>
+                <textarea
+                  name="expectations"
+                  placeholder="What Do You Expect From Us"
+                  className="w-full p-3 border border-main rounded focus:outline-none focus:ring-1 focus:ring-main min-h-[80px]"
+                  value={formData.expectations}
+                  onChange={handleChange}
+                />
+              </div>
+            </div>
+
+            {/* Submit Button - Fixed at bottom */}
+            <div className="mt-6 mb-6">
+              <button
+                type="submit"
+                className="w-full py-3 bg-main text-white font-medium rounded hover:bg-blue-500 transition"
+              >
+                Submit Application
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
     </div>
   );
 };

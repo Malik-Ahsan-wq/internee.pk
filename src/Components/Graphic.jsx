@@ -8,11 +8,15 @@ import {
 } from "react-icons/fa";
 import { BsLinkedin } from "react-icons/bs";
 
-
 const Graphic = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [popupKey, setPopupKey] = useState(0); // force remount
 
-  const openPopup = () => setIsOpen(true);
+  const openPopup = () => {
+    setPopupKey(prev => prev + 1);
+    setIsOpen(true);
+  };
+
   const closePopup = () => setIsOpen(false);
 
   return (
@@ -34,6 +38,7 @@ const Graphic = () => {
 
         {/* Grid Container */}
         <div className="md:grid grid-cols-3 items-center gap-6 mt-10">
+
           {/* Box 1 */}
           <div className="bg-gray-100 md:mt-10 w-80 md:w-100 rounded-2xl shadow-lg px-5 ml-7">
             <img className="w-80 mx-auto" src="/photoshop.png" alt="" />
@@ -42,40 +47,17 @@ const Graphic = () => {
                 Photoshop Internship
               </h1>
               <p className="flex gap-3 items-center">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="lucide lucide-map-pin w-5 h-5 text-[#43A724]"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                >
-                  <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path>
-                  <circle cx="12" cy="10" r="3"></circle>
-                </svg>
-                Rmote
+                <svg className="w-5 h-5 text-[#43A724]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0" /><circle cx="12" cy="10" r="3" /></svg>
+                Remote
               </p>
               <p className="flex gap-3 items-center">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="lucide lucide-clock w-5 h-5 text-blue-500 dark:text-blue-400"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                >
-                  <circle cx="12" cy="12" r="10"></circle>
-                  <polyline points="12 6 12 12 16 14"></polyline>
-                </svg>
+                <svg className="w-5 h-5 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><circle cx="12" cy="12" r="10" /><polyline points="12 6 12 12 16 14" /></svg>
                 2 month
               </p>
               <span className="text-gray-500">internship</span>
             </div>
             <div className="flex justify-center items-center py-5">
-              <button
-                onClick={openPopup}
-                className="bg-main px-20 cursor-pointer md:px-30 py-3 hover:bg-blue-500 text-white rounded-2xl"
-              >
+              <button onClick={openPopup} className="bg-main cursor-pointer px-20 py-3 text-white rounded-2xl hover:bg-blue-500">
                 Apply Now
               </button>
             </div>
@@ -83,50 +65,23 @@ const Graphic = () => {
 
           {/* Box 2 */}
           <div className="bg-gray-100 w-80 md:w-100 rounded-2xl shadow-lg mt-10 ml-7">
-            <img
-              className="w-70 md:w-80 mx-auto pt-8 pb-10"
-              src="/ai copy.png"
-              alt=""
-            />
+            <img className="w-70 md:w-80 mx-auto pt-8 pb-10" src="/ai copy.png" alt="" />
             <div className="pl-5 leading-7">
               <h1 className="text-2xl font-bold pb-5">
                 Illustrator Internship
               </h1>
               <p className="flex gap-3 items-center">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="lucide lucide-map-pin w-5 h-5 text-[#43A724]"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                >
-                  <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path>
-                  <circle cx="12" cy="10" r="3"></circle>
-                </svg>
-                Rmote
+                <svg className="w-5 h-5 text-[#43A724]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0" /><circle cx="12" cy="10" r="3" /></svg>
+                Remote
               </p>
               <p className="flex gap-3 items-center">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="lucide lucide-clock w-5 h-5 text-blue-500 dark:text-blue-400"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                >
-                  <circle cx="12" cy="12" r="10"></circle>
-                  <polyline points="12 6 12 12 16 14"></polyline>
-                </svg>
+                <svg className="w-5 h-5 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><circle cx="12" cy="12" r="10" /><polyline points="12 6 12 12 16 14" /></svg>
                 2 month
               </p>
               <span className="text-gray-500">internship</span>
             </div>
             <div className="flex justify-center items-center py-5">
-              <button
-                onClick={openPopup}
-                className="bg-main text-white hover:bg-blue-500 cursor-pointer px-20 md:px-30 py-3 rounded-2xl"
-              >
+              <button onClick={openPopup} className="bg-main cursor-pointer px-20 py-3 text-white rounded-2xl hover:bg-blue-500">
                 Apply Now
               </button>
             </div>
@@ -134,50 +89,23 @@ const Graphic = () => {
 
           {/* Box 3 */}
           <div className="bg-gray-100 w-80 md:w-100 rounded-2xl shadow-lg mt-10 ml-7">
-            <img
-              className="w-70 mx-auto py-5 pb-18"
-              src="/maya copy.png"
-              alt=""
-            />
+            <img className="w-70 mx-auto py-5 pb-18" src="/maya copy.png" alt="" />
             <div className="pl-5 leading-7">
               <h1 className="text-2xl font-bold pb-5 -mt-10">
                 Auto Desk Maya Internship
               </h1>
               <p className="flex gap-3 items-center">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="lucide lucide-map-pin w-5 h-5 text-[#43A724]"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                >
-                  <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path>
-                  <circle cx="12" cy="10" r="3"></circle>
-                </svg>
-                Rmote
+                <svg className="w-5 h-5 text-[#43A724]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0" /><circle cx="12" cy="10" r="3" /></svg>
+                Remote
               </p>
               <p className="flex gap-3 items-center">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="lucide lucide-clock w-5 h-5 text-blue-500 dark:text-blue-400"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                >
-                  <circle cx="12" cy="12" r="10"></circle>
-                  <polyline points="12 6 12 12 16 14"></polyline>
-                </svg>
+                <svg className="w-5 h-5 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><circle cx="12" cy="12" r="10" /><polyline points="12 6 12 12 16 14" /></svg>
                 2 month
               </p>
               <span className="text-gray-500">internship</span>
             </div>
             <div className="flex justify-center items-center py-5">
-              <button
-                onClick={openPopup}
-                className="bg-[#02a1fa] text-white hover:bg-blue-500 cursor-pointer px-20 md:px-30 py-3 rounded-2xl"
-              >
+              <button onClick={openPopup} className="bg-[#02a1fa] cursor-pointer px-20 py-3 text-white rounded-2xl hover:bg-blue-500">
                 Apply Now
               </button>
             </div>
@@ -185,48 +113,21 @@ const Graphic = () => {
 
           {/* Box 4 */}
           <div className="bg-gray-100 w-80 md:w-100 rounded-2xl shadow-lg mt-10 ml-7">
-            <img
-              className="w-70 md:w-80 py-5 mx-auto"
-              src="/figmaIcon copy.png"
-              alt=""
-            />
+            <img className="w-70 md:w-80 py-5 mx-auto" src="/figmaIcon copy.png" alt="" />
             <div className="pl-5 leading-7">
               <h1 className="text-2xl font-bold pb-5">Photoshop Internship</h1>
               <p className="flex gap-3 items-center">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="lucide lucide-map-pin w-5 h-5 text-[#43A724]"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                >
-                  <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path>
-                  <circle cx="12" cy="10" r="3"></circle>
-                </svg>
-                Rmote
+                <svg className="w-5 h-5 text-[#43A724]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0" /><circle cx="12" cy="10" r="3" /></svg>
+                Remote
               </p>
               <p className="flex gap-3 items-center">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="lucide lucide-clock w-5 h-5 text-blue-500 dark:text-blue-400"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                >
-                  <circle cx="12" cy="12" r="10"></circle>
-                  <polyline points="12 6 12 12 16 14"></polyline>
-                </svg>
+                <svg className="w-5 h-5 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><circle cx="12" cy="12" r="10" /><polyline points="12 6 12 12 16 14" /></svg>
                 2 month
               </p>
               <span className="text-gray-500">internship</span>
             </div>
             <div className="flex justify-center items-center py-5">
-              <button
-                onClick={openPopup}
-                className="bg-main text-white hover:bg-blue-500 cursor-pointer px-20 md:px-30 py-3 rounded-2xl"
-              >
+              <button onClick={openPopup} className="bg-main px-20 cursor-pointer py-3 text-white rounded-2xl hover:bg-blue-500">
                 Apply Now
               </button>
             </div>
@@ -236,18 +137,23 @@ const Graphic = () => {
 
       {/* Popup */}
       {isOpen && (
-        <div className="fixed inset-0 bg-black/55 backdrop-blur-sm flex justify-center items-center z-50 p-4 sm:p-6">
+        <div className="fixed flex justify-center items-center z-50 p-4 sm:p-6">
           <div className="relative w-full max-w-[90%] sm:max-w-[700px] max-h-[100vh] overflow-y-auto bg-white rounded-lg">
             <button
               onClick={closePopup}
-              className="absolute cursor-pointer top-3 right-4 text-3xl sm:text-5xl font-bold text-black hover:text-main"
+              className="absolute top-3 right-4 text-3xl sm:text-5xl font-bold text-black hover:text-main"
             >
               &times;
             </button>
-            <Popup />
+            <Popup key={popupKey} />
           </div>
         </div>
       )}
+
+
+
+
+
 
       {/* Footer */}
       <div className="bg-gray-100 mt-20">
